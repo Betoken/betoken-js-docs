@@ -1,2 +1,5 @@
 site_name: BetokenJS Docs
 theme: readthedocs
+nav:
+  - Home: index.md
+  - API Reference: api.md
