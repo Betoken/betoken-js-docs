@@ -94,3 +94,8 @@ The following properties are exclusive to `compound` investments:
 ## `betoken.user.riskTakenPercentage()`
 ### Returns
 `BigNumber`: the risk taken by the manager, expressed in percentage of the [Risk Threshold](https://betoken.gitbook.io/docs/manage-the-fund/how-does-risk-threshold-work).
+
+
+## `betoken.user.commissionBalance()`
+### Returns
+`BigNumber`: the manager's current commission balance. Includes the unredeemed commission from all cycles.
