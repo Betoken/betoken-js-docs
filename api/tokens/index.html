@@ -72,6 +72,34 @@
             
     <li class="toctree-l3"><a href="#betokentokens">betoken.tokens</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokentokenstokendata">betoken.tokens.tokenData()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetsymboltoinfosymbol">betoken.tokens.assetSymbolToInfo(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetsymboltoptokenssymbol">betoken.tokens.assetSymbolToPTokens(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetsymboltoctokenaddresssymbol">betoken.tokens.assetSymbolToCTokenAddress(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetaddresstosymboladdr">betoken.tokens.assetAddressToSymbol(addr)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetptokenaddresstoinfoaddr">betoken.tokens.assetPTokenAddressToInfo(addr)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensassetctokenaddresstosymboladdr">betoken.tokens.assetCTokenAddressToSymbol(addr)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensgetptokenpriceaddr-underlyingprice">betoken.tokens.getPTokenPrice(addr, underlyingPrice)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensnotstablecoinsymbol">betoken.tokens.notStablecoin(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensiscompoundtokensymbol">betoken.tokens.isCompoundToken(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensisfulcrumtokensymbol">betoken.tokens.isFulcrumToken(symbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentokensfulcrumminstakesymbol-isshort">betoken.tokens.fulcrumMinStake(symbol, isShort)</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -132,6 +160,102 @@
               
                 <h1 id="betokentokens">betoken.tokens</h1>
 <p>Provides info of the tradable assets.</p>
+<h2 id="betokentokenstokendata"><code>betoken.tokens.tokenData()</code></h2>
+<h3 id="returns">Returns</h3>
+<p><code>Array&lt;Object&gt;</code>: list of information about supported assets.</p>
+<p>Each object has the following properties:</p>
+<ul>
+<li><code>name: String</code>: the name of the asset</li>
+<li><code>symbol: String</code>: the symbol of the asset</li>
+<li><code>address: String</code>: the address of the asset (0xeeeeee... for Ether)</li>
+<li><code>decimals: Number</code>: the number of decimals used by the asset</li>
+<li><code>price: BigNumber</code>: the current price of the asset, in Dai Stablecoin</li>
+<li><code>dailyPriceChange: BigNumber</code>: the 24 hour change of the asset's price in Dai, in percent</li>
+</ul>
+<h2 id="betokentokensassetsymboltoinfosymbol"><code>betoken.tokens.assetSymbolToInfo(symbol)</code></h2>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_1">Returns</h3>
+<p><code>Object</code>: information about the asset. The properties are listed in <a href="#betokentokenstokendata">betoken.tokens.tokenData()</a></p>
+<h2 id="betokentokensassetsymboltoptokenssymbol"><code>betoken.tokens.assetSymbolToPTokens(symbol)</code></h2>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_2">Returns</h3>
+<p><code>Array&lt;Object&gt;</code>: list of Fulcrum pTokens of the asset.</p>
+<p>Each object has the following properties:</p>
+<ul>
+<li><code>address: String</code>: address of the pToken</li>
+<li><code>leverage: Number</code>: leverage of the pToken</li>
+<li><code>type: Boolean</code>: <code>true</code> if it's a short pToken, <code>false</code> if it's a long pToken</li>
+</ul>
+<h2 id="betokentokensassetsymboltoctokenaddresssymbol"><code>betoken.tokens.assetSymbolToCTokenAddress(symbol)</code></h2>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_3">Returns</h3>
+<p><code>String</code>: the asset's corresponding Compound cToken's address.</p>
+<h2 id="betokentokensassetaddresstosymboladdr"><code>betoken.tokens.assetAddressToSymbol(addr)</code></h2>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><code>addr: String</code>: the address of the asset you're querying.</li>
+</ul>
+<h3 id="returns_4">Returns</h3>
+<p><code>String</code>: the symbol of the asset</p>
+<h2 id="betokentokensassetptokenaddresstoinfoaddr"><code>betoken.tokens.assetPTokenAddressToInfo(addr)</code></h2>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><code>addr: String</code>: the address of the Fulcrum pToken you're querying.</li>
+</ul>
+<h3 id="returns_5">Returns</h3>
+<h2 id="betokentokensassetctokenaddresstosymboladdr"><code>betoken.tokens.assetCTokenAddressToSymbol(addr)</code></h2>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><code>addr: String</code>: the address of the Compound cToken you're querying.</li>
+</ul>
+<h3 id="returns_6">Returns</h3>
+<p><code>String</code>: the symbol of the cToken's underlying asset.</p>
+<h2 id="betokentokensgetptokenpriceaddr-underlyingprice"><code>betoken.tokens.getPTokenPrice(addr, underlyingPrice)</code></h2>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><code>addr: String</code>: the address of the Fulcrum pToken you're querying.</li>
+<li><code>underlyingPrice: BigNumber</code>: the current price of the pToken's underlying asset, in Dai Stablecoin.</li>
+</ul>
+<h3 id="returns_7">Returns</h3>
+<p><code>BigNumber</code>: the current price of the pToken, in Dai Stablecoin.</p>
+<h2 id="betokentokensnotstablecoinsymbol"><code>betoken.tokens.notStablecoin(symbol)</code></h2>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_8">Returns</h3>
+<p><code>Boolean</code>: <code>true</code> if the asset is not a stablecoin (or something you won't want to invest in, such as WETH), <code>false</code> otherwise.</p>
+<h2 id="betokentokensiscompoundtokensymbol"><code>betoken.tokens.isCompoundToken(symbol)</code></h2>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_9">Returns</h3>
+<p><code>Boolean</code>: <code>true</code> if the asset supports Compound investments, <code>false</code> otherwise.</p>
+<h2 id="betokentokensisfulcrumtokensymbol"><code>betoken.tokens.isFulcrumToken(symbol)</code></h2>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+</ul>
+<h3 id="returns_10">Returns</h3>
+<p><code>Boolean</code>: <code>true</code> if the asset supports Fulcrum investments, <code>false</code> otherwise.</p>
+<h2 id="betokentokensfulcrumminstakesymbol-isshort"><code>betoken.tokens.fulcrumMinStake(symbol, isShort)</code></h2>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li><code>symbol: String</code>: the symbol of the asset you're querying.</li>
+<li><code>isShort: Boolean</code>: true for shorting, false for longing.</li>
+</ul>
+<h3 id="returns_11">Returns</h3>
+<p><code>BigNumber</code>: the minimum Kairo needed to stake in a Fulcrum investment with the given parameters.</p>
               
             </div>
           </div>
