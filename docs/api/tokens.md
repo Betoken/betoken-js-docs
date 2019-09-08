@@ -14,12 +14,14 @@ Each object has the following properties:
 - `price: BigNumber`: the current price of the asset, in Dai Stablecoin
 - `dailyPriceChange: BigNumber`: the 24 hour change of the asset's price in Dai, in percent
 
+
 ## `betoken.tokens.assetSymbolToInfo(symbol)`
 ### Arguments
 - `symbol: String`: the symbol of the asset you're querying.
 
 ### Returns
 `Object`: information about the asset. The properties are listed in [betoken.tokens.tokenData()](#betokentokenstokendata)
+
 
 ## `betoken.tokens.assetSymbolToPTokens(symbol)`
 ### Arguments
@@ -34,12 +36,14 @@ Each object has the following properties:
 - `leverage: Number`: leverage of the pToken
 - `type: Boolean`: `true` if it's a short pToken, `false` if it's a long pToken
 
+
 ## `betoken.tokens.assetSymbolToCTokenAddress(symbol)`
 ### Arguments
 - `symbol: String`: the symbol of the asset you're querying.
 
 ### Returns
 `String`: the asset's corresponding Compound cToken's address.
+
 
 ## `betoken.tokens.assetAddressToSymbol(addr)`
 ### Arguments
@@ -48,11 +52,14 @@ Each object has the following properties:
 ### Returns
 `String`: the symbol of the asset
 
+
 ## `betoken.tokens.assetPTokenAddressToInfo(addr)`
 ### Arguments
 - `addr: String`: the address of the Fulcrum pToken you're querying.
 
 ### Returns
+`Object`: information about the pToken. The properties are listed in [betoken.tokens.assetSymbolToPTokens(symbol)](#betokentokensassetsymboltoptokenssymbol)
+
 
 ## `betoken.tokens.assetCTokenAddressToSymbol(addr)`
 ### Arguments
@@ -60,6 +67,7 @@ Each object has the following properties:
 
 ### Returns
 `String`: the symbol of the cToken's underlying asset.
+
 
 ## `betoken.tokens.getPTokenPrice(addr, underlyingPrice)`
 ### Arguments
@@ -69,12 +77,14 @@ Each object has the following properties:
 ### Returns
 `BigNumber`: the current price of the pToken, in Dai Stablecoin.
 
+
 ## `betoken.tokens.notStablecoin(symbol)`
 ### Arguments
 - `symbol: String`: the symbol of the asset you're querying.
 
 ### Returns
 `Boolean`: `true` if the asset is not a stablecoin (or something you won't want to invest in, such as WETH), `false` otherwise.
+
 
 ## `betoken.tokens.isCompoundToken(symbol)`
 ### Arguments
@@ -83,12 +93,14 @@ Each object has the following properties:
 ### Returns
 `Boolean`: `true` if the asset supports Compound investments, `false` otherwise.
 
+
 ## `betoken.tokens.isFulcrumToken(symbol)`
 ### Arguments
 - `symbol: String`: the symbol of the asset you're querying.
 
 ### Returns
 `Boolean`: `true` if the asset supports Fulcrum investments, `false` otherwise.
+
 
 ## `betoken.tokens.fulcrumMinStake(symbol, isShort)`
 ### Arguments

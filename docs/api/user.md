@@ -5,27 +5,34 @@ Provides info of the manager account.
 ### Returns
 `String`: the address of the user's Ethereum account.
 
+
 ## `betoken.user.sharesBalance()`
 ### Returns
 `BigNumber`: the user's Betoken Shares balance.
+
 
 ## `betoken.user.sharesBalanceInDai()`
 ### Returns
 `BigNumber`: the value of the user's Betoken Shares in Dai Stablecoin.
 
+
 ## `betoken.user.kairoBalance()`
 ### Returns
 `BigNumber`: the user's Kairo balance, not including the Kairo used as stake.
 
+
 ## `betoken.user.tokenBalance(tokenSymbol)`
 ### Arguments
 - `tokenSymbol: String`: the symbol of the token you want to query. ETH is also supported.
+
 ### Returns
 `BigNumber`: the user's balance of the given token.
+
 
 ## `betoken.user.monthlyRoi()`
 ### Returns
 `BigNumber`: the user's ROI for the current investment cycle, in percent. Takes into account the value of the active investments.
+
 
 ## `betoken.user.investmentList()`
 ### Returns
@@ -78,9 +85,11 @@ The following properties are exclusive to `compound` investments:
 - `minCollateralRatio: BigNumber`: the minimum collateral ratio the Compound investment needs to maintain to avoid liquidation.
 - `collateralAmountInDAI: BigNumber`: the initial collateral given to the Compound investment at time of creation, in Dai Stablecoin.
 
+
 ## `betoken.user.portfolioValue()`
 ### Returns
 `BigNumber`: the user's Kairo balance, including the current value of the Kairo used as stake.
+
 
 ## `betoken.user.riskTakenPercentage()`
 ### Returns
