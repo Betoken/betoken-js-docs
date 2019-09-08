@@ -17,7 +17,7 @@ Provides info regarding Betoken's investment cycle.
 
 ## `betoken.timer.phaseLengths()`
 ### Returns
-`Array<Number>`: the lengths of the investment phases, in seconds, indexed by the phases' ids (see `betoken.timer.phase()`)
+`Array<Number>`: the lengths of the investment phases, in seconds, indexed by the phases' ids (see [betoken.timer.phase()](#betokentimerphase))
 
 ## `betoken.timer.cycle()`
 ### Returns
