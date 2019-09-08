@@ -1,5 +1,9 @@
 site_name: BetokenJS Docs
 theme: readthedocs
+site_url: https://betoken.fund/betoken-js-docs
+repo_url: https://github.com/Betoken/betoken-js-docs
+site_description: Documentation for BetokenJS
+site_author: the Betoken team
 nav:
   - Home: index.md
   - API Reference:

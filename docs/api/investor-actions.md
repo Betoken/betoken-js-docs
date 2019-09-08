@@ -8,7 +8,7 @@ Allows an investor to deposit into the fund using Ether.
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount of Ether to deposit
+- `amt: BigNumber`: the amount of Ether to deposit
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
 - `onError: (error) =>`: callback for when there's an error
@@ -24,7 +24,7 @@ Allows an investor to deposit into the fund using Dai Stablecoin.
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount of DAI to deposit
+- `amt: BigNumber`: the amount of DAI to deposit
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
 - `onError: (error) =>`: callback for when there's an error
@@ -39,7 +39,7 @@ Allows an investor to deposit into the fund using an ERC20 token supported by Ky
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount of token to deposit
+- `amt: BigNumber`: the amount of token to deposit
 - `tokenSymbol: String`: the symbol of the token used for deposit
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
@@ -56,7 +56,7 @@ Allows an investor to withdraw their money from the fund in Ether.
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount to withdraw, in Dai Stablecoin
+- `amt: BigNumber`: the amount to withdraw, in Dai Stablecoin
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
 - `onError: (error) =>`: callback for when there's an error
@@ -72,7 +72,7 @@ Allows an investor to withdraw their money from the fund in Dai Stablecoin.
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount to withdraw, in Dai Stablecoin
+- `amt: BigNumber`: the amount to withdraw, in Dai Stablecoin
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
 - `onError: (error) =>`: callback for when there's an error
@@ -88,7 +88,7 @@ Allows an investor to withdraw their money from the fund in an ERC20 token suppo
 Intermission
 
 ### Arguments
-- `amt: BigNumber | String | Number`: the amount to withdraw, in Dai Stablecoin
+- `amt: BigNumber`: the amount to withdraw, in Dai Stablecoin
 - `tokenSymbol: String`: the symbol of the token to used for the withdrawal
 - `onPending: (txHash) =>`: callback for when the transaction hash is available
 - `onConfirm: (receipt) =>`: callback for when the transaction has been accepted into an Ethereum block
