@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/timer/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/user/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/tokens/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/stats/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/refresh/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/investor-actions/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://betoken.fund/betoken-js-docs/api/manager-actions/</loc>
      <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
+  <meta name="author" content="the Betoken team">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>betoken.investor-actions - BetokenJS Docs</title>
+  <title>betoken.investorActions - BetokenJS Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "betoken.investor-actions";
+    var mkdocs_page_name = "betoken.investorActions";
     var mkdocs_page_input_path = "api/investor-actions.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/betoken-js-docs/api/investor-actions/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,21 +75,37 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../refresh/">betoken.refresh-actions</a>
+    <a class="" href="../refresh/">betoken.refreshActions</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">betoken.investor-actions</a>
+    <a class="current" href="./">betoken.investorActions</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#betokeninvestor-actions">betoken.investor-actions</a></li>
+    <li class="toctree-l3"><a href="#betokeninvestoractions">betoken.investorActions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionsdepositethamt-onpending-onconfirm-onerror">betoken.investorActions.depositETH(amt, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionsdepositdaiamt-onpending-onconfirm-onerror">betoken.investorActions.depositDAI(amt, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionsdeposittokenamt-tokensymbol-onpending-onconfirm-onerror">betoken.investorActions.depositToken(amt, tokenSymbol, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionswithdrawethamt-onpending-onconfirm-onerror">betoken.investorActions.withdrawETH(amt, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionswithdrawdaiamt-onpending-onconfirm-onerror">betoken.investorActions.withdrawDAI(amt, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokeninvestoractionswithdrawtokenamt-tokensymbol-onpending-onconfirm-onerror">betoken.investorActions.withdrawToken(amt, tokenSymbol, onPending, onConfirm, onError)</a></li>
+        
+        </ul>
     
 
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../manager-actions/">betoken.manager-actions</a>
+    <a class="" href="../manager-actions/">betoken.managerActions</a>
                 </li>
     </ul>
 	    </li>
@@ -120,8 +136,11 @@
         
       
     
-    <li>betoken.investor-actions</li>
+    <li>betoken.investorActions</li>
     <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Betoken/betoken-js-docs/edit/master/docs/api/investor-actions.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -130,8 +149,88 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="betokeninvestor-actions">betoken.investor-actions</h1>
+                <h1 id="betokeninvestoractions">betoken.investorActions</h1>
 <p>Allows the user to deposit/withdraw their money in the Betoken fund.</p>
+<h2 id="betokeninvestoractionsdepositethamt-onpending-onconfirm-onerror"><code>betoken.investorActions.depositETH(amt, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to deposit into the fund using Ether.</p>
+<h3 id="available-during-investment-phase">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount of Ether to deposit</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokeninvestoractionsdepositdaiamt-onpending-onconfirm-onerror"><code>betoken.investorActions.depositDAI(amt, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to deposit into the fund using Dai Stablecoin.</p>
+<h3 id="available-during-investment-phase_1">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount of DAI to deposit</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_1">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokeninvestoractionsdeposittokenamt-tokensymbol-onpending-onconfirm-onerror"><code>betoken.investorActions.depositToken(amt, tokenSymbol, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to deposit into the fund using an ERC20 token supported by Kyber Network, other than Dai Stablecoin.</p>
+<h3 id="available-during-investment-phase_2">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount of token to deposit</li>
+<li><code>tokenSymbol: String</code>: the symbol of the token used for deposit</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_2">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokeninvestoractionswithdrawethamt-onpending-onconfirm-onerror"><code>betoken.investorActions.withdrawETH(amt, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to withdraw their money from the fund in Ether.</p>
+<h3 id="available-during-investment-phase_3">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount to withdraw, in Dai Stablecoin</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_3">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokeninvestoractionswithdrawdaiamt-onpending-onconfirm-onerror"><code>betoken.investorActions.withdrawDAI(amt, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to withdraw their money from the fund in Dai Stablecoin.</p>
+<h3 id="available-during-investment-phase_4">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount to withdraw, in Dai Stablecoin</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_4">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokeninvestoractionswithdrawtokenamt-tokensymbol-onpending-onconfirm-onerror"><code>betoken.investorActions.withdrawToken(amt, tokenSymbol, onPending, onConfirm, onError)</code></h2>
+<p>Allows an investor to withdraw their money from the fund in an ERC20 token supported by Kyber Network, other than Dai Stablecoin.</p>
+<h3 id="available-during-investment-phase_5">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><code>amt: BigNumber</code>: the amount to withdraw, in Dai Stablecoin</li>
+<li><code>tokenSymbol: String</code>: the symbol of the token to used for the withdrawal</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_5">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
               
             </div>
           </div>
@@ -139,10 +238,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../manager-actions/" class="btn btn-neutral float-right" title="betoken.manager-actions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../manager-actions/" class="btn btn-neutral float-right" title="betoken.managerActions">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../refresh/" class="btn btn-neutral" title="betoken.refresh-actions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../refresh/" class="btn btn-neutral" title="betoken.refreshActions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -166,6 +265,8 @@
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Betoken/betoken-js-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../refresh/" style="color: #fcfcfc;">&laquo; Previous</a></span>

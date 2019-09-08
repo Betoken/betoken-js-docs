@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
+  <meta name="author" content="the Betoken team">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>betoken.refresh-actions - BetokenJS Docs</title>
+  <title>betoken.refreshActions - BetokenJS Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "betoken.refresh-actions";
+    var mkdocs_page_name = "betoken.refreshActions";
     var mkdocs_page_input_path = "api/refresh.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/betoken-js-docs/api/refresh/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,21 +75,31 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">betoken.refresh-actions</a>
+    <a class="current" href="./">betoken.refreshActions</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#betokenrefresh-actions">betoken.refresh-actions</a></li>
+    <li class="toctree-l3"><a href="#betokenrefreshactions">betoken.refreshActions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokenrefreshactionsinvestments">betoken.refreshActions.investments()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenrefreshactionsprices">betoken.refreshActions.prices()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenrefreshactionsinvestments_1">betoken.refreshActions.investments()</a></li>
+        
+        </ul>
     
 
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../investor-actions/">betoken.investor-actions</a>
+    <a class="" href="../investor-actions/">betoken.investorActions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../manager-actions/">betoken.manager-actions</a>
+    <a class="" href="../manager-actions/">betoken.managerActions</a>
                 </li>
     </ul>
 	    </li>
@@ -120,8 +130,11 @@
         
       
     
-    <li>betoken.refresh-actions</li>
+    <li>betoken.refreshActions</li>
     <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Betoken/betoken-js-docs/edit/master/docs/api/refresh.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -130,8 +143,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="betokenrefresh-actions">betoken.refresh-actions</h1>
+                <h1 id="betokenrefreshactions">betoken.refreshActions</h1>
 <p>Allows the user to refresh the data.</p>
+<h2 id="betokenrefreshactionsinvestments"><code>betoken.refreshActions.investments()</code></h2>
+<p>Refreshes <code>betoken.user.investmentList()</code>.</p>
+<h3 id="returns">Returns</h3>
+<p><code>Promise</code>: resolves when the refresh is finished.</p>
+<h2 id="betokenrefreshactionsprices"><code>betoken.refreshActions.prices()</code></h2>
+<p>Refreshes the token prices in <code>betoken.tokens.tokenData()</code>.</p>
+<h3 id="returns_1">Returns</h3>
+<p><code>Promise</code>: resolves when the refresh is finished.</p>
+<h2 id="betokenrefreshactionsinvestments_1"><code>betoken.refreshActions.investments()</code></h2>
+<p>Refreshes all data.</p>
+<h3 id="returns_2">Returns</h3>
+<p><code>Promise</code>: resolves when the refresh is finished.</p>
               
             </div>
           </div>
@@ -139,7 +164,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../investor-actions/" class="btn btn-neutral float-right" title="betoken.investor-actions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../investor-actions/" class="btn btn-neutral float-right" title="betoken.investorActions">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../stats/" class="btn btn-neutral" title="betoken.stats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -166,6 +191,8 @@
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Betoken/betoken-js-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../stats/" style="color: #fcfcfc;">&laquo; Previous</a></span>

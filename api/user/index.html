@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
+  <meta name="author" content="the Betoken team">
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>betoken.user - BetokenJS Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -19,7 +19,7 @@
     // Current page data
     var mkdocs_page_name = "betoken.user";
     var mkdocs_page_input_path = "api/user.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/betoken-js-docs/api/user/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -88,6 +88,8 @@
         
             <li><a class="toctree-l4" href="#betokenuserrisktakenpercentage">betoken.user.riskTakenPercentage()</a></li>
         
+            <li><a class="toctree-l4" href="#betokenusercommissionbalance">betoken.user.commissionBalance()</a></li>
+        
         </ul>
     
 
@@ -103,15 +105,15 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../refresh/">betoken.refresh-actions</a>
+    <a class="" href="../refresh/">betoken.refreshActions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../investor-actions/">betoken.investor-actions</a>
+    <a class="" href="../investor-actions/">betoken.investorActions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../manager-actions/">betoken.manager-actions</a>
+    <a class="" href="../manager-actions/">betoken.managerActions</a>
                 </li>
     </ul>
 	    </li>
@@ -144,6 +146,9 @@
     
     <li>betoken.user</li>
     <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Betoken/betoken-js-docs/edit/master/docs/api/user.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -240,6 +245,9 @@
 <h2 id="betokenuserrisktakenpercentage"><code>betoken.user.riskTakenPercentage()</code></h2>
 <h3 id="returns_8">Returns</h3>
 <p><code>BigNumber</code>: the risk taken by the manager, expressed in percentage of the <a href="https://betoken.gitbook.io/docs/manage-the-fund/how-does-risk-threshold-work">Risk Threshold</a>.</p>
+<h2 id="betokenusercommissionbalance"><code>betoken.user.commissionBalance()</code></h2>
+<h3 id="returns_9">Returns</h3>
+<p><code>BigNumber</code>: the manager's current commission balance. Includes the unredeemed commission from all cycles.</p>
               
             </div>
           </div>
@@ -274,6 +282,8 @@
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Betoken/betoken-js-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../timer/" style="color: #fcfcfc;">&laquo; Previous</a></span>

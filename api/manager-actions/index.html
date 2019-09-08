@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
+  <meta name="author" content="the Betoken team">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>betoken.manager-actions - BetokenJS Docs</title>
+  <title>betoken.managerActions - BetokenJS Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "betoken.manager-actions";
+    var mkdocs_page_name = "betoken.managerActions";
     var mkdocs_page_input_path = "api/manager-actions.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/betoken-js-docs/api/manager-actions/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,18 +75,46 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../refresh/">betoken.refresh-actions</a>
+    <a class="" href="../refresh/">betoken.refreshActions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../investor-actions/">betoken.investor-actions</a>
+    <a class="" href="../investor-actions/">betoken.investorActions</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">betoken.manager-actions</a>
+    <a class="current" href="./">betoken.managerActions</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#betokenmanager-actions">betoken.manager-actions</a></li>
+    <li class="toctree-l3"><a href="#betokenmanageractions">betoken.managerActions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsnewinvestmentwithsymboltokensymbol-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.newInvestmentWithSymbol(tokenSymbol, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsnewinvestmentwithsymboltokenaddress-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.newInvestmentWithSymbol(tokenAddress, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionssellinvestmentid-sellproportion-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.sellInvestment(id, sellProportion, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsnewcompoundorderordertype-tokensymbol-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.newCompoundOrder(orderType, tokenSymbol, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionssellcompoundorderid-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.sellCompoundOrder(id, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsrepaycompoundorderid-amountindai-onpending-onconfirm-onerror">betoken.managerActions.repayCompoundOrder(id, amountInDAI, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsredeemcommissioninshares-onpending-onconfirm-onerror">betoken.managerActions.redeemCommission(inShares, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsredeemcommissionforcycleinshares-cycle-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror">betoken.managerActions.redeemCommissionForCycle(inShares, cycle, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsnextphaseonpending-onconfirm-onerror">betoken.managerActions.nextPhase(onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsregisterwithdaiamountindai-onpending-onconfirm-onerror">betoken.managerActions.registerWithDAI(amountInDAI, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsregisterwithethamountineth-onpending-onconfirm-onerror">betoken.managerActions.registerWithETH(amountInETH, onPending, onConfirm, onError)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenmanageractionsregisterwithtokenamountintoken-tokensymbol-onpending-onconfirm-onerror">betoken.managerActions.registerWithToken(amountInToken, tokenSymbol, onPending, onConfirm, onError)</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -120,8 +148,11 @@
         
       
     
-    <li>betoken.manager-actions</li>
+    <li>betoken.managerActions</li>
     <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Betoken/betoken-js-docs/edit/master/docs/api/manager-actions.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -130,8 +161,181 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="betokenmanager-actions">betoken.manager-actions</h1>
+                <h1 id="betokenmanageractions">betoken.managerActions</h1>
 <p>Allows the user to create investments and margin orders, sell them, and maintain the collateration of margin orders.</p>
+<h2 id="betokenmanageractionsnewinvestmentwithsymboltokensymbol-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.newInvestmentWithSymbol(tokenSymbol, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Creates a new investment into an asset specified by its symbol.</p>
+<h3 id="available-during-investment-phase">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><code>tokenSymbol: String</code>: the asset's symbol</li>
+<li><code>stakeInKRO: BigNumber</code>: the amount of Kairo to stake into the investment</li>
+<li><code>minPrice: BigNumber</code>: the minimum acceptable price for the asset</li>
+<li><code>maxPrice: BigNumber</code>: the maximum acceptable price for the asset</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsnewinvestmentwithsymboltokenaddress-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.newInvestmentWithSymbol(tokenAddress, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Creates a new investment into an asset/Fulcrum pToken specified by its address.</p>
+<h3 id="available-during-investment-phase_1">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><code>tokenAddress: String</code>: the asset/pToken's address</li>
+<li><code>stakeInKRO: BigNumber</code>: the amount of Kairo to stake into the investment</li>
+<li><code>minPrice: BigNumber</code>: the minimum acceptable price for the asset/pToken</li>
+<li><code>maxPrice: BigNumber</code>: the maximum acceptable price for the asset/pToken</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_1">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionssellinvestmentid-sellproportion-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.sellInvestment(id, sellProportion, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Sells a basic/Fulcrum investment.</p>
+<h3 id="available-during-investment-phase_2">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><code>id: Number</code>: the ID of the investment</li>
+<li><code>sellProportion: Number</code>: the proportion of the investment to sell, between 0 and 1</li>
+<li><code>minPrice: BigNumber</code>: the minimum acceptable price for the asset/pToken</li>
+<li><code>maxPrice: BigNumber</code>: the maximum acceptable price for the asset/pToken</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_2">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsnewcompoundorderordertype-tokensymbol-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.newCompoundOrder(orderType, tokenSymbol, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Creates a Compound margin order of the given asset.</p>
+<h3 id="available-during-investment-phase_3">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><code>orderType: Boolean</code>: <code>true</code> for shorting, <code>false</code> for longing</li>
+<li><code>tokenSymbol: String</code>: the asset's symbol</li>
+<li><code>stakeInKRO: BigNumber</code>: the amount of Kairo to stake into the investment</li>
+<li><code>minPrice: BigNumber</code>: the minimum acceptable price for the asset</li>
+<li><code>maxPrice: BigNumber</code>: the maximum acceptable price for the asset</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_3">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionssellcompoundorderid-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.sellCompoundOrder(id, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Sells a Compound margin order.</p>
+<h3 id="available-during-investment-phase_4">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><code>id: Number</code>: the ID of the Compound order to sell</li>
+<li><code>minPrice: BigNumber</code>: the minimum acceptable price for the asset</li>
+<li><code>maxPrice: BigNumber</code>: the maximum acceptable price for the asset</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_4">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsrepaycompoundorderid-amountindai-onpending-onconfirm-onerror"><code>betoken.managerActions.repayCompoundOrder(id, amountInDAI, onPending, onConfirm, onError)</code></h2>
+<p>Repays the debt of a Compound margin order using its cash.</p>
+<h3 id="available-during-investment-phase_5">Available during investment phase</h3>
+<p>Manage</p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><code>id: Number</code>: the ID of the Compound order to repay</li>
+<li><code>amountInDAI: BigNumber</code>: the amount of debt to repay, in DAI</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_5">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsredeemcommissioninshares-onpending-onconfirm-onerror"><code>betoken.managerActions.redeemCommission(inShares, onPending, onConfirm, onError)</code></h2>
+<p>Redeems the total commission balance for the manager.</p>
+<h3 id="available-during-investment-phase_6">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><code>inShares: Boolean</code>: <code>true</code> to redeem commission in Betoken Shares, <code>false</code> to redeem in DAI</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_6">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsredeemcommissionforcycleinshares-cycle-stakeinkro-minprice-maxprice-onpending-onconfirm-onerror"><code>betoken.managerActions.redeemCommissionForCycle(inShares, cycle, stakeInKRO, minPrice, maxPrice, onPending, onConfirm, onError)</code></h2>
+<p>Redeems the commission of a particular cycle for the manager. Only use if <code>redeemCommission()</code> fails.</p>
+<h3 id="available-during-investment-phase_7">Available during investment phase</h3>
+<p>Intermission</p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><code>inShares: Boolean</code>: <code>true</code> to redeem commission in Betoken Shares, <code>false</code> to redeem in DAI</li>
+<li><code>cycle: Number</code>: the investment cycle</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_7">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsnextphaseonpending-onconfirm-onerror"><code>betoken.managerActions.nextPhase(onPending, onConfirm, onError)</code></h2>
+<p>Transitions the Betoken fund to the next investment phase when the current phase is over. This affects all Betoken users, and the manager that calls this function first is rewarded 1 KRO.</p>
+<h3 id="available-during-investment-phase_8">Available during investment phase</h3>
+<p>All</p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_8">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsregisterwithdaiamountindai-onpending-onconfirm-onerror"><code>betoken.managerActions.registerWithDAI(amountInDAI, onPending, onConfirm, onError)</code></h2>
+<p>Registers the user as a Betoken fund manager, using DAI to pay for the cost. Can only be called once per user.</p>
+<h3 id="available-during-investment-phase_9">Available during investment phase</h3>
+<p>All</p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><code>amountInDAI: BigNumber</code>: the amount to pay, in DAI</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_9">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsregisterwithethamountineth-onpending-onconfirm-onerror"><code>betoken.managerActions.registerWithETH(amountInETH, onPending, onConfirm, onError)</code></h2>
+<p>Registers the user as a Betoken fund manager, using Ether to pay for the cost. Can only be called once per user.</p>
+<h3 id="available-during-investment-phase_10">Available during investment phase</h3>
+<p>All</p>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li><code>amountInETH: BigNumber</code>: the amount to pay, in Ether</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_10">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
+<h2 id="betokenmanageractionsregisterwithtokenamountintoken-tokensymbol-onpending-onconfirm-onerror"><code>betoken.managerActions.registerWithToken(amountInToken, tokenSymbol, onPending, onConfirm, onError)</code></h2>
+<p>Registers the user as a Betoken fund manager, using an ERC20 token supported by Kyber Network to pay for the cost. Can only be called once per user.</p>
+<h3 id="available-during-investment-phase_11">Available during investment phase</h3>
+<p>All</p>
+<h3 id="arguments_11">Arguments</h3>
+<ul>
+<li><code>amountInToken: BigNumber</code>: the amount to pay, in the specified token</li>
+<li><code>tokenSymbol: String</code>: the symbol of the token used for payment</li>
+<li><code>onPending: (txHash) =&gt;</code>: callback for when the transaction hash is available</li>
+<li><code>onConfirm: (receipt) =&gt;</code>: callback for when the transaction has been accepted into an Ethereum block</li>
+<li><code>onError: (error) =&gt;</code>: callback for when there's an error</li>
+</ul>
+<h3 id="returns_11">Returns</h3>
+<p><code>Promise</code>: resolves when the transaction has been sent.</p>
               
             </div>
           </div>
@@ -140,7 +344,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../investor-actions/" class="btn btn-neutral" title="betoken.investor-actions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../investor-actions/" class="btn btn-neutral" title="betoken.investorActions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -164,6 +368,8 @@
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Betoken/betoken-js-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../investor-actions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
