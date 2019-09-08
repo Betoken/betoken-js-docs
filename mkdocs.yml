@@ -7,6 +7,6 @@ nav:
     - betoken.user: api/user.md
     - betoken.tokens: api/tokens.md
     - betoken.stats: api/stats.md
-    - betoken.refresh-actions: api/refresh.md
-    - betoken.investor-actions: api/investor-actions.md
-    - betoken.manager-actions: api/manager-actions.md
+    - betoken.refreshActions: api/refresh.md
+    - betoken.investorActions: api/investor-actions.md
+    - betoken.managerActions: api/manager-actions.md
