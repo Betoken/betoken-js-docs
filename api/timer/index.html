@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>betoken.timer - BetokenJS Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "betoken.timer";
+    var mkdocs_page_input_path = "api/timer.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BetokenJS Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API Reference</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">betoken.timer</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#betokentimer">betoken.timer</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokentimertimetillphaseend">betoken.timer.timeTillPhaseEnd()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentimerphase">betoken.timer.phase()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentimerphasestarttime">betoken.timer.phaseStartTime()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentimerphaselengths">betoken.timer.phaseLengths()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokentimercycle">betoken.timer.cycle()</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user/">betoken.user</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tokens/">betoken.tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stats/">betoken.stats</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../refresh/">betoken.refresh-actions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../investor-actions/">betoken.investor-actions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../manager-actions/">betoken.manager-actions</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BetokenJS Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API Reference &raquo;</li>
+        
+      
+    
+    <li>betoken.timer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="betokentimer">betoken.timer</h1>
+<p>Provides info regarding Betoken's investment cycle.</p>
+<h2 id="betokentimertimetillphaseend"><code>betoken.timer.timeTillPhaseEnd()</code></h2>
+<h3 id="returns">Returns</h3>
+<p><code>Number</code>: the time left until the end of the current investment phase, in seconds.</p>
+<h2 id="betokentimerphase"><code>betoken.timer.phase()</code></h2>
+<h3 id="returns_1">Returns</h3>
+<p><code>Number</code>: the id of the current investment phase:
+- 0 for the Intermission phase
+- 1 for the Manage phase</p>
+<h2 id="betokentimerphasestarttime"><code>betoken.timer.phaseStartTime()</code></h2>
+<h3 id="returns_2">Returns</h3>
+<p><code>Number</code>: the Unix timestamp at which the current investment phase began, in seconds.</p>
+<h2 id="betokentimerphaselengths"><code>betoken.timer.phaseLengths()</code></h2>
+<h3 id="returns_3">Returns</h3>
+<p><code>Array&lt;Number&gt;</code>: the lengths of the investment phases, in seconds, indexed by the phases' ids (see <code>betoken.timer.phase()</code>)</p>
+<h2 id="betokentimercycle"><code>betoken.timer.cycle()</code></h2>
+<h3 id="returns_4">Returns</h3>
+<p><code>Number</code>: the current cycle number.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../user/" class="btn btn-neutral float-right" title="betoken.user">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../user/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

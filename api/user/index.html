@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>betoken.user - BetokenJS Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "betoken.user";
+    var mkdocs_page_input_path = "api/user.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BetokenJS Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API Reference</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../timer/">betoken.timer</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">betoken.user</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#betokenuser">betoken.user</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#betokenuseraddress">betoken.user.address()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenusersharesbalance">betoken.user.sharesBalance()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenusersharesbalanceindai">betoken.user.sharesBalanceInDai()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenuserkairobalance">betoken.user.kairoBalance()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenusertokenbalancetokensymbol">betoken.user.tokenBalance(tokenSymbol)</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenusermonthlyroi">betoken.user.monthlyRoi()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenuserinvestmentlist">betoken.user.investmentList()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenuserportfoliovalue">betoken.user.portfolioValue()</a></li>
+        
+            <li><a class="toctree-l4" href="#betokenuserrisktakenpercentage">betoken.user.riskTakenPercentage()</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tokens/">betoken.tokens</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stats/">betoken.stats</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../refresh/">betoken.refresh-actions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../investor-actions/">betoken.investor-actions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../manager-actions/">betoken.manager-actions</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BetokenJS Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>API Reference &raquo;</li>
+        
+      
+    
+    <li>betoken.user</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="betokenuser">betoken.user</h1>
+<p>Provides info of the manager account.</p>
+<h2 id="betokenuseraddress"><code>betoken.user.address()</code></h2>
+<h3 id="returns">Returns</h3>
+<p><code>String</code>: the address of the user's Ethereum account.</p>
+<h2 id="betokenusersharesbalance"><code>betoken.user.sharesBalance()</code></h2>
+<h3 id="returns_1">Returns</h3>
+<p><code>BigNumber</code>: the user's Betoken Shares balance.</p>
+<h2 id="betokenusersharesbalanceindai"><code>betoken.user.sharesBalanceInDai()</code></h2>
+<h3 id="returns_2">Returns</h3>
+<p><code>BigNumber</code>: the value of the user's Betoken Shares in Dai Stablecoin.</p>
+<h2 id="betokenuserkairobalance"><code>betoken.user.kairoBalance()</code></h2>
+<h3 id="returns_3">Returns</h3>
+<p><code>BigNumber</code>: the user's Kairo balance, not including the Kairo used as stake.</p>
+<h2 id="betokenusertokenbalancetokensymbol"><code>betoken.user.tokenBalance(tokenSymbol)</code></h2>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><code>tokenSymbol: String</code>: the symbol of the token you want to query. ETH is also supported.</li>
+</ul>
+<h3 id="returns_4">Returns</h3>
+<p><code>BigNumber</code>: the user's balance of the given token.</p>
+<h2 id="betokenusermonthlyroi"><code>betoken.user.monthlyRoi()</code></h2>
+<h3 id="returns_5">Returns</h3>
+<p><code>BigNumber</code>: the user's ROI for the current investment cycle, in percent. Takes into account the value of the active investments.</p>
+<h2 id="betokenuserinvestmentlist"><code>betoken.user.investmentList()</code></h2>
+<h3 id="returns_6">Returns</h3>
+<p><code>Array&lt;Object&gt;</code>: list of the user's investments in the current investment cycle.</p>
+<p>The investment objects have the following properties:</p>
+<ul>
+<li><code>type: String</code>: type of the investment, one of <code>basic</code> <code>compound</code> and <code>fulcrum</code>.</li>
+<li><code>id: Number</code>: ID of the investment. Investments of type <code>basic</code> and <code>fulcrum</code> share an ID system, <code>compound</code> investments has its own.</li>
+<li><code>tokenSymbol: String</code>: symbol of the token that the investment invests in.</li>
+<li><code>tokenAddress: String</code>: different for each type:<ul>
+<li><code>basic</code>: address of the token</li>
+<li><code>fulcrum</code>: address of the Fulcrum position token</li>
+<li><code>compound</code>: address of the Compound cToken</li>
+</ul>
+</li>
+<li><code>stake: BigNumber</code>: amount of Kairo staked into the investment.</li>
+<li><code>buyPrice: BigNumber</code>: different for each type:<ul>
+<li><code>basic</code>: price of the token at time of investment</li>
+<li><code>fulcrum</code>: price of the Fulcrum position token at time of investment</li>
+<li><code>compound</code>: unavaiable</li>
+</ul>
+</li>
+<li><code>sellPrice: BigNumber</code>: different for each type:<ul>
+<li><code>basic</code>: price of the token when the investment was sold, or the current price of the token if the investment is active.</li>
+<li><code>fulcrum</code>: price of the Fulcrum position token when the investment was sold, or the current price of the Fulcrum position token if the investment is active.</li>
+<li><code>compound</code>: unavailable</li>
+</ul>
+</li>
+<li><code>ROI: BigNumber</code>: the ROI of the investment when it was sold, or its current ROI if the investment is active, in percent.</li>
+<li><code>kroChange: BigNumber</code>: the change of the Kairo staked in the investment since creation, equals <code>stake * (ROI / 100)</code></li>
+<li><code>currValue: BigNumber</code>: the current value of the Kairo staked in the investment, equals <code>stake + kroChange</code></li>
+<li><code>buyTime: Date</code>: the investment's time of creation.</li>
+<li><code>isSold: Boolean</code>: whether or not the investment has been sold.</li>
+</ul>
+<p>The following properties are exclusive to <code>fulcrum</code> and <code>compound</code> investments:</p>
+<ul>
+<li><code>leverage: Number</code>: amount of leverage of the investment, always positive</li>
+<li><code>orderType: Boolean</code>: <code>true</code> for short investments, <code>false</code> for long investments</li>
+<li><code>safety: Boolean</code>: different for each type:<ul>
+<li><code>fulcrum</code>: <code>false</code> if the position token's price is within 10% of the liquidation price, <code>true</code> otherwise</li>
+<li><code>compound</code>: <code>false</code> if the collateral ratio is within 10% of the liquidation threshold, <code>true</code> otherwise</li>
+</ul>
+</li>
+</ul>
+<p>The following properties are exclusive to <code>fulcrum</code> investments:</p>
+<ul>
+<li><code>liquidationPrice: BigNumber</code>: the liquidation price of the Fulcrum position token. If the price is less than the liquidation price the position will be liquidated.</li>
+</ul>
+<p>The following properties are exclusive to <code>compound</code> investments:</p>
+<ul>
+<li><code>collateralRatio: BigNumber</code>: the current collateral ratio of the Compound investment.</li>
+<li><code>currProfit: BigNumber</code>: the current profit of the Compound investment, in Dai Stablecoin.</li>
+<li><code>currCollateral: BigNumber</code>: the current collateral of the Compound investment, in Dai Stablecoin.</li>
+<li><code>currBorrow: BigNumber</code>: the current debt of the Compound investment, in Dai Stablecoin.</li>
+<li><code>currCash: BigNumber</code>: the current cash held by the Compound investment, in Dai Stablecoin.</li>
+<li><code>currLiquidity: BigNumber</code>: the current liquidity of the Compound investment, in Dai Stablecoin.</li>
+<li><code>minCollateralRatio: BigNumber</code>: the minimum collateral ratio the Compound investment needs to maintain to avoid liquidation.</li>
+<li><code>collateralAmountInDAI: BigNumber</code>: the initial collateral given to the Compound investment at time of creation, in Dai Stablecoin.</li>
+</ul>
+<h2 id="betokenuserportfoliovalue"><code>betoken.user.portfolioValue()</code></h2>
+<h3 id="returns_7">Returns</h3>
+<p><code>BigNumber</code>: the user's Kairo balance, including the current value of the Kairo used as stake.</p>
+<h2 id="betokenuserrisktakenpercentage"><code>betoken.user.riskTakenPercentage()</code></h2>
+<h3 id="returns_8">Returns</h3>
+<p><code>BigNumber</code>: the risk taken by the manager, expressed in percentage of the <a href="https://betoken.gitbook.io/docs/manage-the-fund/how-does-risk-threshold-work">Risk Threshold</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tokens/" class="btn btn-neutral float-right" title="betoken.tokens">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../timer/" class="btn btn-neutral" title="betoken.timer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../timer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tokens/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
